@@ -1,5 +1,9 @@
 name = "bolyai9c-website"
+main = "main.js"
 compatibility_date = "2026-11-20"
+
+[vars]
+ENVIRONMENT = "production"
 
 [assets]
 directory = "."
