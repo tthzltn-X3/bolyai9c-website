@@ -1,0 +1,5 @@
+name = "bolyai9c-website"
+compatibility_date = "2026-11-20"
+
+[assets]
+directory = "."
