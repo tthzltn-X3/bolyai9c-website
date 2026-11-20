@@ -5,5 +5,9 @@ compatibility_date = "2026-11-20"
 [vars]
 ENVIRONMENT = "production"
 
+[[d1_databases]]
+binding = "data"
+database_id = "54b1452f-c775-4565-b8d5-155dae2a88b5"
+
 [assets]
 directory = "."
