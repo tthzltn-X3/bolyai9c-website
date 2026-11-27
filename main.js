@@ -1,9 +1,9 @@
 const EID_HTML = `
 <!DOCTYPE html>
 <html>
-<head><title>EID Lookup</title></head>
+<head><title>eIDv1 Lookup</title></head>
 <body>
-  <h1>EID Lookup</h1>
+  <h1>eIDv1 Lookup</h1>
   <form method="POST" action="/eid/lookup">
     <input type="text" name="id" placeholder="Enter ID" required>
     <button type="submit">Search</button>
