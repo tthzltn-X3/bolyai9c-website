@@ -10,20 +10,18 @@ const EID_HTML = `
   </form>
   <div id="results"></div>
   <script>
-    const params = new URLSearchParams(location.search);
-    const id = params.get('id');
-    if (id) {
-      fetch('/eid/lookup', {
+    document.querySelector('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = new FormData(e.target).get('id');
+      const r = await fetch('/eid/lookup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id })
-      })
-        .then(r => r.json())
-        .then(data => {
-          document.getElementById('results').innerHTML =
-            data.length ? '<pre>' + JSON.stringify(data, null, 2) + '</pre>' : '<p>No results.</p>';
-        });
-    }
+      });
+      const data = await r.json();
+      document.getElementById('results').innerHTML =
+        data.length ? '<pre>' + JSON.stringify(data, null, 2) + '</pre>' : '<p>No results.</p>';
+    });
   </script>
 </body>
 </html>`;
